@@ -1,82 +1,85 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-    {
-      "key": "ctrl+alt+win+n",
-      "command": "-welcome.showNewFileEntries"
-    },
-    {
-      "key": "ctrl+n",
-      "command": "-workbench.action.files.newUntitledFile"
-    },
-    {
-      "key": "alt+g",
-      "command": "debug.jumpToCursor"
-    },
-    {
-      "key": "shift+alt+j",
-      "command": "editor.action.joinLines"
-    },
-    {
-      "key": "alt+e",
-      "command": "solutionExplorer.focus"
-    },
-    {
-      "key": "ctrl+o t",
-      "command": "workbench.view.testing.focus"
-    },
-    {
-      "key": "ctrl+o s",
-      "command": "workbench.scm.focus"
-    },
-    {
-      "key": "ctrl+shift+a",
-      "command": "workbench.action.terminal.focusNext",
-      "when": "terminalFocus"
-    },
-    {
-      "key": "ctrl+shift+b",
-      "command": "workbench.action.terminal.focusPrevious",
-      "when": "terminalFocus"
-    },
-    {
-      "key": "ctrl+shift+j",
-      "command": "workbench.action.togglePanel"
-    },
-    {
-      "key": "ctrl+shift+n",
-      "command": "workbench.action.terminal.new",
-      "when": "terminalFocus"
-    },
-    {
-      "key": "ctrl+shift+w",
-      "command": "workbench.action.terminal.kill",
-      "when": "terminalFocus"
-    },
-    { "command": "workbench.action.toggleSidebarVisibility", "key": "ctrl+e" },
-    {
-      "command": "workbench.files.action.focusFilesExplorer",
-      "key": "ctrl+e",
-      "when": "editorTextFocus"
-    },
-    {
-      "key": "n",
-      "command": "explorer.newFile",
-      "when": "filesExplorerFocus && !inputFocus"
-    },
-    {
-      "command": "renameFile",
-      "key": "r",
-      "when": "filesExplorerFocus && !inputFocus"
-    },
-    {
-      "key": "shift+n",
-      "command": "explorer.newFolder",
-      "when": "explorerViewletFocus"
-    },
-    {
-      "command": "deleteFile",
-      "key": "d",
-      "when": "filesExplorerFocus && !inputFocus"
-    }
-  ]
-  
+  {
+    "key": "ctrl+alt+win+n",
+    "command": "-welcome.showNewFileEntries"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "alt+g",
+    "command": "debug.jumpToCursor"
+  },
+  {
+    "key": "shift+alt+j",
+    "command": "editor.action.joinLines"
+  },
+  {
+    "key": "alt+e",
+    "command": "solutionExplorer.focus"
+  },
+  {
+    "key": "alt+f",
+    "command": "workbench.files.action.collapseExplorerFolders"
+  },
+  {
+    "key": "ctrl+o t",
+    "command": "workbench.view.testing.focus"
+  },
+  {
+    "key": "ctrl+o s",
+    "command": "workbench.scm.focus"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  { "command": "workbench.action.toggleSidebarVisibility", "key": "ctrl+e" },
+  {
+    "command": "workbench.files.action.focusFilesExplorer",
+    "key": "ctrl+e",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "n",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "renameFile",
+    "key": "r",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "command": "deleteFile",
+    "key": "d",
+    "when": "filesExplorerFocus && !inputFocus"
+  }
+]

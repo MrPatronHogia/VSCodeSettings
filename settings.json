@@ -1,88 +1,106 @@
 {
-    "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-      "editor.formatOnSave": true,
-      "editor.codeActionsOnSave": {
-        "source.organizeImports": true
-      }
-    },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "omnisharp.organizeImportsOnFormat": true,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "editor.formatOnSave": true,
+  "omnisharp.organizeImportsOnFormat": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "eslint.codeActionsOnSave.rules": null,
+  "git.enableSmartCommit": true,
+  "codestream.serverUrl": "https://codestream-us1.service.newrelic.com",
+  "codestream.email": "anton.patron@hogia.se",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "editor.stickyScroll.enabled": true,
+  "workbench.sideBar.location": "right",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "workbench.colorTheme": "Visual Studio 2019 Dark",
+  "editor.lineNumbers": "relative",
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-s>": true,
+    "<C-z>": true,
+    "<C-p>": false
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["leader", "w"], "commands": [":wa!"] },
+    { "before": ["leader", "q"], "commands": [":q!"] },
+    { "before": ["leader", "x"], "commands": [":x!"] },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
     },
-    "[json]": {
-      "editor.defaultFormatter": "vscode.json-language-features"
+    // NAVIGATION
+    // switch b/w buffers
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+
+    // panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
     },
-    "eslint.codeActionsOnSave.rules": null,
-    "git.enableSmartCommit": true,
-    "codestream.serverUrl": "https://codestream-eu1.service.eu.newrelic.com",
-    "codestream.email": "anton.patron@hogia.se",
-    "[jsonc]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
     },
-    "typescript.preferences.importModuleSpecifier": "relative",
-    "javascript.preferences.importModuleSpecifier": "relative",
-    "editor.stickyScroll.enabled": true,
-    "workbench.sideBar.location": "right",
-    "github.copilot.enable": {
-      "*": true,
-      "plaintext": true,
-      "markdown": true,
-      "scminput": true
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
     },
-    "[html]": {
-      "editor.defaultFormatter": "vscode.html-language-features"
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
     },
-    "workbench.colorTheme": "Visual Studio 2019 Dark",
-    "editor.lineNumbers": "relative",
-    "vim.handleKeys": {
-      "<C-d>": true,
-      "<C-s>": true,
-      "<C-z>": true,
-      "<C-p>": false
+    {
+      "before": ["<Leader>", "p"],
+      "commands": ["workbench.action.showCommands"]
     },
-    "vim.normalModeKeyBindingsNonRecursive": [
-      { "before": ["leader", "w"], "commands": [":w!"] },
-      { "before": ["leader", "q"], "commands": [":q!"] },
-      { "before": ["leader", "x"], "commands": [":x!"] },
-      {
-        "before": ["g", "h"],
-        "commands": ["editor.action.showDefinitionPreviewHover"]
-      },
-      // NAVIGATION
-      // switch b/w buffers
-      { "before": ["<S-h>"], "commands": [":bprevious"] },
-      { "before": ["<S-l>"], "commands": [":bnext"] },
-  
-      // splits
-      { "before": ["leader", "v"], "commands": [":vsplit"] },
-      { "before": ["leader", "s"], "commands": [":split"] },
-  
-      // panes
-      {
-        "before": ["leader", "h"],
-        "commands": ["workbench.action.focusLeftGroup"]
-      },
-      {
-        "before": ["leader", "j"],
-        "commands": ["workbench.action.focusBelowGroup"]
-      },
-      {
-        "before": ["leader", "k"],
-        "commands": ["workbench.action.focusAboveGroup"]
-      },
-      {
-        "before": ["leader", "l"],
-        "commands": ["workbench.action.focusRightGroup"]
-      }
-    ],
-  
-    "vim.hlsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.leader": "<Space>",
-    "window.zoomLevel": -1
-  }
-  
+    {
+      "before": ["<Leader>", "t"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    { "before": ["<leader>", "o"], "after": ["o", "<Esc>", "k"] },
+    {
+      "before": ["<leader>", "O"],
+      "after": ["O", "<Esc>", "j"]
+    }
+  ],
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "vim.easymotion": true,
+  "vim.hlsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.leader": "<Space>",
+  "projectManager.git.baseFolders": ["C:\\Users\\anton.patron\\Git"],
+  "projectManager.hg.maxDepthRecursion": 5,
+  "security.allowedUNCHosts": ["Users"],
+  "window.zoomLevel": -1
+}
