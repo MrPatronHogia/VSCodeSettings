@@ -3,7 +3,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     }
   },
   "editor.formatOnSave": true,
@@ -42,7 +42,8 @@
     "<C-d>": true,
     "<C-s>": true,
     "<C-z>": true,
-    "<C-p>": false
+    "<C-p>": false,
+    "<C-f>": true
   },
   "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["leader", "w"], "commands": [":wa!"] },
@@ -87,9 +88,19 @@
       "commands": ["workbench.action.gotoSymbol"]
     },
     { "before": ["<leader>", "o"], "after": ["o", "<Esc>", "k"] },
+    { "before": ["<leader>", "m"], "after": ["v", "i", "w"] },
     {
       "before": ["<leader>", "O"],
       "after": ["O", "<Esc>", "j"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["lineBreakInsert"],
+      "silent": true
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
     }
   ],
   "extensions.experimental.affinity": {
@@ -100,7 +111,19 @@
   "vim.useSystemClipboard": true,
   "vim.leader": "<Space>",
   "projectManager.git.baseFolders": ["C:\\Users\\anton.patron\\Git"],
-  "projectManager.hg.maxDepthRecursion": 5,
+  "projectManager.hg.maxDepthRecursion": 6,
   "security.allowedUNCHosts": ["Users"],
-  "window.zoomLevel": -1
+  "azurite.blobPort": 10001,
+  "projectManager.git.maxDepthRecursion": 6,
+  "projectManager.git.ignoredFolders": [
+    "node_modules",
+    "out",
+    "typings",
+    "test",
+    ".haxelib",
+    "bin"
+  ],
+  "window.zoomLevel": -2,
+  "cSpell.language": "en,sv",
+  "git.confirmSync": false
 }
